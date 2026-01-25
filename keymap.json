@@ -1,0 +1,58 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl-m ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-m ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-m ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-m ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "shift-h": "pane::ActivatePreviousItem",
+      "shift-l": "pane::ActivateNextItem",
+      "ctrl-shift-h": "pane::SwapItemLeft",
+      "ctrl-shift-l": "pane::SwapItemRight",
+      "ctrl-w": "pane::CloseActiveItem",
+      "alt-j": "editor::GoToHunk",
+      "alt-k": "editor::GoToPreviousHunk",
+      "alt-shift-j": "editor::GoToDiagnostic",
+      "alt-shift-k": "editor::GoToPreviousDiagnostic",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-alt-up": "editor::AddSelectionAbove", // Insert Cursor Above
+      "ctrl-alt-down": "editor::AddSelectionBelow", // Insert Cursor Below
+    },
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert && !in_snippet",
+    "bindings": {
+      "tab": "editor::MoveToEndOfLargerSyntaxNode",
+      "shift-tab": "editor::Tab",
+    },
+  },
+]
