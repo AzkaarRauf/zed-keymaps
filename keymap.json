@@ -49,7 +49,7 @@
     },
   },
   {
-    "context": "Editor && vim_mode == insert && !in_snippet",
+    "context": "Editor && vim_mode == insert && !in_snippet && !edit_prediction && !edit_prediction_conflict",
     "bindings": {
       "tab": "editor::MoveToEndOfLargerSyntaxNode",
       "shift-tab": "editor::Tab",
